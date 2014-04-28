@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCalculator", "SuperCalculator\SuperCalculator.csproj", "{C6A91049-B238-4A84-B92B-D09B3B7879C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{AAF475D4-1DCD-417F-9325-C9A31763DD1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6A91049-B238-4A84-B92B-D09B3B7879C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A91049-B238-4A84-B92B-D09B3B7879C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A91049-B238-4A84-B92B-D09B3B7879C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A91049-B238-4A84-B92B-D09B3B7879C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF475D4-1DCD-417F-9325-C9A31763DD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF475D4-1DCD-417F-9325-C9A31763DD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF475D4-1DCD-417F-9325-C9A31763DD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF475D4-1DCD-417F-9325-C9A31763DD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
