@@ -1,13 +1,7 @@
-# Aceptación - "2 + 2", devuelve 4
-	- La cadena "2 + 2" tiene dos números y un operador que son '2', '2' y '+'
-# Aceptación - "5 + 4 * 2 / 2", devuelve 9
+# Aceptación - "(2 + 2) * (3 + 1)", devuelve 16
+	- "(2 + 2)", se traduce en la expresión "2 + 2"
+	- "((2) + 2)", se traduce en la expresión "2 + 2"
+	- "(2 + 2", produce una excepción
 # Aceptación - "3 / 2",produce el mensaje ERROR
-# Aceptación - "* * 4 - 2":produce el mensaje ERROR
-# Aceptación - "* 4 5 - 2":produce el mensaje ERROR
-# Aceptación - "* 4 5 - 2 -":produce el mensaje ERROR
-# Aceptación - "*45-2-":produce el mensaje ERROR
 # Aceptación - "2 + -2" devuelve 0
-# Aceptación - Límite Superior = 100
-# Aceptación - Límite Superior = 500
-# Aceptación - Límite Inferior = -1000
-# Aceptación - Límite Inferior = -10
+

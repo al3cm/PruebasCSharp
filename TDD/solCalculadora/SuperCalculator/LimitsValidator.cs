@@ -9,6 +9,6 @@ namespace SuperCalculator
     {
         void SetLimits(int a, int b);
         void ValidateArgs(int a, int b);
-       // void ValidateResult(int a);
+        void ValidateResult(int a);
     }
 }

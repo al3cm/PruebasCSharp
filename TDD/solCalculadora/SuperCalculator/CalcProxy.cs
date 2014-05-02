@@ -6,10 +6,18 @@ using System.Reflection;
 
 namespace SuperCalculator
 {
-    public class CalcProxy
+    public class CalcProxy : CalculatorProxy
     {
-        private Calculator _calculator;
+        private BasicCalculator _calculator;
         private Validator _validator;
+
+
+
+        public BasicCalculator Calculator
+        {
+            get { return _calculator; }
+            set { _calculator = value; }
+        }
 
 
         public CalcProxy(Validator validator,Calculator calculator)

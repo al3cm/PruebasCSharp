@@ -45,12 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOperator.cs" />
     <Compile Include="BasicCalculator.cs" />
     <Compile Include="CalcProxy.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="CalculatorProxy.cs" />
     <Compile Include="Delegates.cs" />
+    <Compile Include="DivideOperator.cs" />
+    <Compile Include="ExpressionFixer.cs" />
+    <Compile Include="MathExpression.cs" />
+    <Compile Include="MathRegex.cs" />
+    <Compile Include="Lexer.cs" />
     <Compile Include="LimitsValidator.cs" />
+    <Compile Include="MathLexer.cs" />
+    <Compile Include="MathOperator.cs" />
+    <Compile Include="MathParser.cs" />
+    <Compile Include="MathToken.cs" />
+    <Compile Include="MultiplyOperator.cs" />
+    <Compile Include="OperatorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubstractOperator.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

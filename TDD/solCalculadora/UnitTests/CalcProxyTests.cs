@@ -110,5 +110,17 @@ namespace UnitTests
                 //Ok, this works
             }
         }
+
+        [Test]
+        public void Multiply()
+        {
+            Assert.AreEqual(_calcProxy.BinaryOperation(_calculator.Multiply,2,5),10);
+        }
+
+        [Test]
+        public void Division()
+        {
+            Assert.AreEqual(_calcProxy.BinaryOperation(_calculator.Divide,10, 2), 5);
+        }
     }
 }
