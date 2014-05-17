@@ -5,12 +5,8 @@ using System.Text;
 
 namespace SuperCalculator
 {
-    class MathExpression 
+    public interface FileHandler<T> where T : DataFile
     {
-        public MathExpression(string expression)
-        { 
-        
-        }
-
+        T CreateFile(string path);
     }
 }

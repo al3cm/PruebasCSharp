@@ -13,19 +13,21 @@ namespace UnitTests
     {
         private MathParser _parser;
         private MathLexer _lexer;
-        private MathRegex _regex;
         private CalculatorProxy _calcProxy;
         private Calculator _calculator;
+        private Resolver _resolver;
+        private Precedence _precedence;
 
         [SetUp]
         public void SetUp() 
         {
           
-            _regex = new MathRegex();
-            _lexer = new MathLexer(_regex,new ExpressionFixer(_regex));
+            _lexer = new MathLexer(new ExpressionFixer());
             _calculator = new Calculator();
             _calcProxy = new CalcProxy(new Validator(-100, 100), _calculator);
-            _parser = new MathParser(_lexer,_calcProxy);
+            _precedence = new Precedence();
+            _resolver = new Resolver(_lexer, _calcProxy,_precedence);
+            _parser = new MathParser(_lexer,_resolver);
             
         }
 
@@ -33,35 +35,6 @@ namespace UnitTests
         public void ProcessSimpleExpression()
         {
             Assert.AreEqual(4, _parser.ProcessExpression("2 + 2"));
-        }
-
-        [Test]
-        public void ParserWorksWithCalcProxy()
-        {
-            CalculatorProxy calcProxyMock = MockRepository.GenerateMock<CalculatorProxy>();
-            calcProxyMock.Expect(x => x.Calculator).Return(_calculator);
-            calcProxyMock.Expect(x => x.BinaryOperation(_calculator.Add,2,2)).Return(4);
-
-            MathParser parser = new MathParser(_lexer,calcProxyMock);
-            parser.ProcessExpression("2 + 2");
-
-            calcProxyMock.VerifyAllExpectations();
-        }
-
-        [Test]
-        public void ParserWorksWithLexer()
-        {
-            List<MathToken> tokens = new List<MathToken>();
-
-            tokens.Add(new MathToken("2"));
-            tokens.Add(new MathToken("+"));
-            tokens.Add(new MathToken("2"));
-            Lexer lexerMock = MockRepository.GenerateStrictMock<Lexer>();
-            lexerMock.Expect(x => x.GetTokens("2 + 2")).Return(tokens);
-
-            MathParser parser = new MathParser(lexerMock,new CalcProxy(new Validator(-100,100),new Calculator()));
-            parser.ProcessExpression("2 + 2");
-            lexerMock.VerifyAllExpectations();
         }
 
         [Test]
@@ -82,7 +55,12 @@ namespace UnitTests
             Assert.AreEqual(8,_parser.ProcessExpression("5 + 4 - 1 * 2 / 2"));
         }
 
-
+        
+        [Test]
+        public void ProcessAcceptanceExpressionWithParenthesis()
+        {
+            Assert.AreEqual(16,_parser.ProcessExpression("(2 + 2) * (3 + 1)") );
+        }
 
     } 
 }

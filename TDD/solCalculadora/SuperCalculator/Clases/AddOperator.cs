@@ -12,9 +12,9 @@ namespace SuperCalculator
         {
             _token = "+";
         }
-        public override int Resolve(int a, int b, CalculatorProxy calcProxy)
+        public override int Resolve(int a, int b)
         {
-            return calcProxy.BinaryOperation(calcProxy.Calculator.Add, a, b);
+            return CalcProxy.BinaryOperation(CalcProxy.Calculator.Add, a, b);
         }
     }
 }

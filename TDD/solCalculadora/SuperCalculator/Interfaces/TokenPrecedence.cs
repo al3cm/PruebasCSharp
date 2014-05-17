@@ -5,8 +5,8 @@ using System.Text;
 
 namespace SuperCalculator
 {
-    public interface Lexer
+    public interface TokenPrecedence
     {
-        List<MathToken> GetTokens(string expression);
+        MathOperator GetMaxPrecedence(List<MathToken> tokens);
     }
 }

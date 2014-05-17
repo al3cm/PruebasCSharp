@@ -9,14 +9,9 @@ namespace SuperCalculator
 {
     public class ExpressionFixer
     {
-        MathRegex _mathRegex;
+ 
 
-        public ExpressionFixer(MathRegex mathRegex)
-        {
-            _mathRegex = mathRegex;
-        }
-
-        public void FixExpressions(List<string> expressions)
+        public void FixExpressions(List<MathExpression> expressions)
         {
             bool listHasChanged = true;
             while (listHasChanged)
@@ -24,13 +19,14 @@ namespace SuperCalculator
                 listHasChanged = false;
                 for (int i = 0; i < expressions.Count; i++)
                 {
-                    if (_mathRegex.IsNumberAndOperator(expressions[i]))
+                    expressions[i].Expression = expressions[i].Expression.Trim();
+                    if (MathRegex.IsNumberAndOperator(expressions[i].Expression))
                     {
-                        splitByOperator(expressions,expressions[i],i);
+                        splitByOperator(expressions,expressions[i].Expression,i);
                         listHasChanged = true;
                         break;
                     }
-                    if (expressions[i].Length==0)
+                    if (expressions[i].IsEmpty())
                     {
                         expressions.RemoveAt(i);
                         listHasChanged = true;
@@ -41,7 +37,7 @@ namespace SuperCalculator
         }
 
           
-        private void splitByOperator(List<string> expressions,string inputExpression,int position)
+        private void splitByOperator(List<MathExpression> expressions,string inputExpression,int position)
         {
             string[] nextExps = Regex.Split(inputExpression,@"([+|\-|/|*])");
             int j = position;
@@ -49,7 +45,7 @@ namespace SuperCalculator
             foreach (string subExp in nextExps)
             {
                // expressions.Insert(j, new MathExpression(subExp.Trim()));
-                expressions.Insert(j, subExp.Trim());
+                expressions.Insert(j, new MathExpression(subExp.Trim()));
                 j++;
             }
         }

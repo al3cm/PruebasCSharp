@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C6A91049-B238-4A84-B92B-D09B3B7879C3}</ProjectGuid>
+    <ProjectGuid>{B91D7043-C47F-49CC-94FF-3577E0DEB7CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperCalculator</RootNamespace>
-    <AssemblyName>SuperCalculator</AssemblyName>
+    <RootNamespace>IntegrationTests</RootNamespace>
+    <AssemblyName>IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,40 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\AddOperator.cs" />
-    <Compile Include="Interfaces\DataFile.cs" />
-    <Compile Include="Clases\ExpressionBuilder.cs" />
-    <Compile Include="Clases\MathNumber.cs" />
-    <Compile Include="Clases\Precedence.cs" />
-    <Compile Include="Clases\Resolver.cs" />
-    <Compile Include="Clases\UserFile.cs" />
-    <Compile Include="Clases\UserFileHandler.cs" />
-    <Compile Include="Clases\UsersStorageManager.cs" />
-    <Compile Include="Interfaces\BasicCalculator.cs" />
-    <Compile Include="Clases\CalcProxy.cs" />
-    <Compile Include="Clases\Calculator.cs" />
-    <Compile Include="Interfaces\CalculatorProxy.cs" />
-    <Compile Include="Delegados\Delegates.cs" />
-    <Compile Include="Clases\DivideOperator.cs" />
-    <Compile Include="Clases\ExpressionFixer.cs" />
-    <Compile Include="Clases\MathExpression.cs" />
-    <Compile Include="Clases\MathRegex.cs" />
-    <Compile Include="Interfaces\FileHandler.cs" />
-    <Compile Include="Interfaces\Lexer.cs" />
-    <Compile Include="Interfaces\LimitsValidator.cs" />
-    <Compile Include="Clases\MathLexer.cs" />
-    <Compile Include="Clases\MathOperator.cs" />
-    <Compile Include="Clases\MathParser.cs" />
-    <Compile Include="Clases\MathToken.cs" />
-    <Compile Include="Clases\MultiplyOperator.cs" />
-    <Compile Include="Clases\OperatorFactory.cs" />
-    <Compile Include="Interfaces\TokenPrecedence.cs" />
+    <Compile Include="FileHandlerTests.cs" />
+    <Compile Include="Multiplatform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Clases\SubstractOperator.cs" />
-    <Compile Include="Clases\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <ProjectReference Include="..\SuperCalculator\SuperCalculator.csproj">
+      <Project>{C6A91049-B238-4A84-B92B-D09B3B7879C3}</Project>
+      <Name>SuperCalculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

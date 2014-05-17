@@ -10,27 +10,36 @@ namespace UnitTests
     [TestFixture]
     public class ExpressionFixerTests
     {
-        private MathRegex _regex;
-
+       
+        ExpressionFixer _fixer;
+        List<MathExpression> _expressions;
+        
 
         [SetUp]
         public void SetUp()
         {
 
-            _regex = new MathRegex();
-
+            _fixer = new ExpressionFixer();
+            _expressions = new List<MathExpression>();
         }
 
 
         [Test]
         public void SplitExpressionWhenOperatorAtTheEnd()
         {
-            ExpressionFixer fixer = new ExpressionFixer(_regex);
-            List<string> expressions = new List<string>();
-            expressions.Add("2 +");
-            fixer.FixExpressions(expressions);
-            Assert.Contains("2",expressions);
-            Assert.Contains("+", expressions);
+            _expressions.Add(new MathExpression("2 +"));
+            _fixer.FixExpressions(_expressions);
+            Assert.IsTrue(_expressions[0].Expression == "2" || _expressions[0].Expression == "+");
+            Assert.IsTrue(_expressions[1].Expression == "2" || _expressions[1].Expression == "+");
         }
+
+        [Test]
+        public void Trim()
+        {
+            _expressions.Add(new MathExpression(" * "));
+            _fixer.FixExpressions(_expressions);
+            Assert.AreEqual("*", _expressions[0].Expression);
+        }
+
     }
 }

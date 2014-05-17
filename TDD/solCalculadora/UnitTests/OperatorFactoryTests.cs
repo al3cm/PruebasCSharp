@@ -13,14 +13,14 @@ namespace UnitTests
         [Test]
         public void CreateMultiplyOperator()
         {
-            MathOperator op = OperatorFactory.Create(new MathToken("*"));
+            MathOperator op = OperatorFactory.Create("*");
             Assert.AreEqual(op.Precedence,2);
         }
 
         [Test]
         public void CreateDivisionOperator()
         {
-            MathOperator op = OperatorFactory.Create(new MathToken("/"));
+            MathOperator op = OperatorFactory.Create("/");
             Assert.AreEqual(op.Precedence, 2);
         }
 

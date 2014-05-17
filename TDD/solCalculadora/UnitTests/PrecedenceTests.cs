@@ -12,19 +12,21 @@ namespace UnitTests
     {
         private MathParser _parser;
         private MathLexer _lexer;
-        private MathRegex _regex;
         private CalculatorProxy _calcProxy;
         private Calculator _calculator;
+        private Resolver _resolver;
+        private Precedence _precedence;
 
         [SetUp]
         public void SetUp()
         {
 
-            _regex = new MathRegex();
-            _lexer = new MathLexer(_regex, new ExpressionFixer(_regex));
+            _lexer = new MathLexer( new ExpressionFixer());
             _calculator = new Calculator();
             _calcProxy = new CalcProxy(new Validator(-100, 100), _calculator);
-            _parser = new MathParser(_lexer, _calcProxy);
+            _precedence = new Precedence();
+            _resolver = new Resolver(_lexer, _calcProxy,_precedence);
+            _parser = new MathParser( _lexer ,_resolver);
 
         }
 
@@ -38,7 +40,8 @@ namespace UnitTests
         public void GetMaxPrecedence()
         {
             List<MathToken> tokens = _lexer.GetTokens("3 + 3 * 2");
-            MathOperator op = _parser.GetMaxPrecedence(tokens);
+            MathToken token = _precedence.GetMaxPrecedence(tokens);
+            MathOperator op = OperatorFactory.Create(token.Token);
             Assert.AreEqual(op.Token,"*");
         }
 

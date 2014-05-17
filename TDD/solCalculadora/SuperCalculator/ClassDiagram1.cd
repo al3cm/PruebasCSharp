@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SuperCalculator.AddOperator">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\AddOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.CalcProxy" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Clases\CalcProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperCalculator.Calculator" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Calculator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperCalculator.DivideOperator">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\DivideOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.ExpressionFixer">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAA=</HashCode>
+      <FileName>Clases\ExpressionFixer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MathExpression">
+    <Position X="15.25" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAA=</HashCode>
+      <FileName>Clases\MathExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MathLexer" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAwAAAAAAAAAAAAAgAAAAAAgAACAAAAAgAAEAMAA=</HashCode>
+      <FileName>Clases\MathLexer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperCalculator.MathOperator">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACAAAAAAgAAAAAAQAAABAAAEAAAABAAA=</HashCode>
+      <FileName>Clases\MathOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MathParser">
+    <Position X="10.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAAAIAAAAAQAAAAAABAgAAAAAAAAAIA=</HashCode>
+      <FileName>Clases\MathParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MathRegex">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Clases\MathRegex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MathToken">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAEAAAEAAAAAAAAAAAAAAAAAAAhAAA=</HashCode>
+      <FileName>Clases\MathToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.MultiplyOperator">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\MultiplyOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.OperatorFactory">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\OperatorFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.SubstractOperator">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\SubstractOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperCalculator.Validator" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAFACAAAAAAAAARAAAAAAAAAAAAAAACACAAAAAAgA=</HashCode>
+      <FileName>Clases\Validator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="SuperCalculator.BasicCalculator" Collapsed="true">
+    <Position X="9.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\BasicCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SuperCalculator.CalculatorProxy" Collapsed="true">
+    <Position X="11.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\CalculatorProxy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SuperCalculator.Lexer" Collapsed="true">
+    <Position X="7.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Interfaces\Lexer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SuperCalculator.LimitsValidator" Collapsed="true">
+    <Position X="11.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\LimitsValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="SingleBinaryOperation" Collapsed="true">
+    <Position X="9.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Delegados\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
